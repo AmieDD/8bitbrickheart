@@ -1,0 +1,81 @@
+//Amie and Krystle 
+//LEGO Masters 
+body {
+  margin: 0;
+  overflow: hidden;
+  //LEGO Yello Hex
+  background-color: #FFE330;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+.layer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cube, .knob {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: currentColor;
+  box-shadow: #000 4px 4px 8px 1px; 
+}
+.knob{
+  position: absolute;
+  top: 7px; left: 7px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.layer:nth-child(1)
+{
+  color: red;
+  width: 50px;
+  height: 50px;
+  z-index: 90;
+}
+.layer:nth-child(2)
+{ 
+  //color: #0088dd 
+  color: red;
+  width: 150px;
+  height: 150px;
+  z-index: 80;
+}
+.layer:nth-child(3)
+{
+  //LEGO Blue
+  color: red;
+  width: 250px;
+  height: 250px;
+  z-index: 70;
+  
+  & .cube:nth-child(21),
+    .cube:nth-child(25) {
+      visibility: hidden;
+  }
+}
+.layer:nth-child(4){
+  color: red;
+  width: 350px;
+  height: 350px;
+  z-index: 60;
+  
+  & .cube:nth-child(1),
+    .cube:nth-child(4), 
+    .cube:nth-child(7),
+    .cube:nth-child(n + 29) {
+      visibility: hidden;
+  }
+  & .cube:nth-child(46) 
+  {
+      visibility: visible;
+  }
+}
